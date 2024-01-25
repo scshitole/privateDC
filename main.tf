@@ -37,17 +37,3 @@ resource "bigip_fast_application" "MyChart" {
 }
 EOF
 }
-
-/*resource "bigip_fast_application" "foo-app" {
-  template  = "examples/simple_http"
-  fast_json = <<EOF
-{
-"tenant_name": "Someten",
-"application_name": "myapp",
-"virtual_port": 8080,
-"virtual_address": "200.1.1.1",
-"server_port": 80,
-"server_addresses": ["201.1.1.2"]
-}
-EOF
-}*/
