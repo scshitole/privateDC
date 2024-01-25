@@ -17,7 +17,7 @@ provider "bigip" {
   password = var.password
 }
 
-resource "bigip_fast_application" "MyChart" {
+/*resource "bigip_fast_application" "MyChart" {
 
   template        = "epic_multi_env_templates/9. Epic Epic MyCHART"
   fast_json = <<EOF
@@ -28,4 +28,18 @@ resource "bigip_fast_application" "MyChart" {
       "service_port": "80"
 }
 EOF
+}*/
+
+resource "bigip_fast_application" "foo-app" {
+  template  = "examples/simple_http"
+  fast_json = <<EOF
+{
+"tenant_name": "Someten",
+"application_name": "myapp",
+"virtual_port": 8080,
+"virtual_address": "200.1.1.1"
+"server_port": 80
+}
+EOF
+}
 }
