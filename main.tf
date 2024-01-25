@@ -37,7 +37,7 @@ resource "bigip_fast_application" "foo-app" {
 "tenant_name": "Someten",
 "application_name": "myapp",
 "virtual_port": 8080,
-"virtual_address": "200.1.1.1"
+"virtual_address": "200.1.1.1",
 "server_port": 80
 }
 EOF
