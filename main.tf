@@ -19,7 +19,7 @@ provider "bigip" {
 
 resource "bigip_fast_application" "MyChart" {
 
-  template        = "epic_multi_env_templates/Epic_mychart"
+  template        = "epic_multi_env_templates/Multi_MyChart_VS"
   fast_json = <<EOF
 {
       "tenant_name": "EPIC_VS_MyChart",
