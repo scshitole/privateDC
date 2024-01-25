@@ -42,4 +42,3 @@ resource "bigip_fast_application" "foo-app" {
 }
 EOF
 }
-}
