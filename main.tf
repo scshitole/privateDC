@@ -21,16 +21,19 @@ resource "bigip_fast_application" "MyChart" {
 
   template        = "epic_multi_env_templates/Multi_MyChart_VS"
   fast_json = <<EOF
-{
-      "tenant_name": "EPIC_VS_MyChart",
-      "env": "nonProd",
-      "virtualAddress": "100.0.0.201",
-      "server_addresses": ["100.1.1.20","100.1.1.21"],
-      "service_port": "80",
-      "instanceWebsiteName"": "MyChartsWebsiteName",
-      "certificate": "default.crt",
-      "privatekey": "default.key"
-
+  {
+  "env": "NonPROD",
+  "tenant_name": "EPIC_VS_MyChart",
+  "virtualAddress": "111.0.0.201",
+  "server_addresses": [
+    "111.1.1.20",
+    "111.1.1.21"
+  ],
+  "service_port": "80",
+  "certificate": "default.crt",
+  "privatekey": "default.key",
+  "instanceWebsiteName": "MyChartsWebsiteName",
+  "iCWebsiteName": "ICWebsiteName"
 }
 EOF
 }
