@@ -23,7 +23,7 @@ resource "bigip_fast_application" "MyChart" {
   fast_json = <<EOF
   {
   "env": "NonPROD",
-  "tenant_name": "EPIC_VS_MyChart",
+  "tenant_name": "VS_MyChart",
   "virtualAddress": "111.0.0.201",
   "server_addresses": [
     "111.1.1.20",
