@@ -17,21 +17,25 @@ provider "bigip" {
   password = var.password
 }
 
-/*resource "bigip_fast_application" "MyChart" {
+resource "bigip_fast_application" "MyChart" {
 
-  template        = "epic_multi_env_templates/9. Epic Epic MyCHART"
+  template        = "epic_multi_env_templates/Epic_mychart"
   fast_json = <<EOF
 {
       "tenant_name": "EPIC_VS_MyChart",
+      "env": "nonProd",
       "virtualAddress": "100.0.0.201",
       "server_addresses": ["100.1.1.20","100.1.1.21"],
       "service_port": "80",
+      "instanceWebsiteName"": "MyChartsWebsiteName",
+      "certificate": "default.crt",
+      "privatekey": "default.key"
 
 }
 EOF
-}*/
+}
 
-resource "bigip_fast_application" "foo-app" {
+/*resource "bigip_fast_application" "foo-app" {
   template  = "examples/simple_http"
   fast_json = <<EOF
 {
@@ -43,4 +47,4 @@ resource "bigip_fast_application" "foo-app" {
 "server_addresses": ["201.1.1.2"]
 }
 EOF
-}
+}*/
