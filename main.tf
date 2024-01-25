@@ -25,7 +25,8 @@ provider "bigip" {
       "tenant_name": "EPIC_VS_MyChart",
       "virtualAddress": "100.0.0.201",
       "server_addresses": ["100.1.1.20","100.1.1.21"],
-      "service_port": "80"
+      "service_port": "80",
+
 }
 EOF
 }*/
@@ -38,7 +39,8 @@ resource "bigip_fast_application" "foo-app" {
 "application_name": "myapp",
 "virtual_port": 8080,
 "virtual_address": "200.1.1.1",
-"server_port": 80
+"server_port": 80,
+"server_addresses": ["201.1.1.2"]
 }
 EOF
 }
