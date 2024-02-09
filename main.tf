@@ -17,7 +17,7 @@ provider "bigip" {
   password = var.password
 }
 
-resource "bigip_fast_application" "MyChart01" {
+resource "bigip_fast_application" "MyChart" {
 
   template        = "epic_multi_env_templates/Multi_MyChart_VS"
   fast_json = <<EOF
