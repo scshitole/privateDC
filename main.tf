@@ -24,10 +24,9 @@ resource "bigip_fast_application" "MyChart02" {
   {
   "env": "PROD",
   "tenant_name": "VS_MyChart20",
-  "virtualAddress": "111.0.0.201",
+  "virtualAddress": "10.23.0.101",
   "server_addresses": [
-    "111.1.1.20",
-    "111.1.1.21"
+    "10.23.0.20"
   ],
   "service_port": "80",
   "certificate": "default.crt",
