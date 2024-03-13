@@ -8,3 +8,4 @@ This project uses Terraform Agent, BIG-IP is in private Data Center
 - This repo is used with Terraform Cloud
 
 ![image](https://github.com/scshitole/privateDC/assets/13858248/92281330-93d6-401d-99d9-e21dd2ab604c)
+- To learn more about agent installation https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-agents
